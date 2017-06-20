@@ -3,7 +3,9 @@
   sudo: yes
   tasks:
   - name: easy_install
-    apt: pkg=python-setuptools
+    #apt: pkg=python-setuptools
+    #由于自己实验中使用CentOS，故命令改为yum，如下
+    yum: pkg=python-setuptools
   - name: pip
     easy_install: name=pip
   - name: docker-py
